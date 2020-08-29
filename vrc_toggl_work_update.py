@@ -61,7 +61,7 @@ def work_time_info():
     start_time = start_re.group()
     # JST-time change-your-country-time
     start_time_re = re.findall('\d+', start_time)
-    start_time_hour = (int(start_time_re[0])+9) % 24
+    start_time_hour = (int(start_time_re[0])+9) % 24 #UTC+?
     start_time_minute = int(start_time_re[1])
     start_time_second = int(start_time_re[2])
     start_datetime = datetime.time(
